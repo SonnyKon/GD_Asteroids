@@ -1,5 +1,8 @@
-[gd_scene format=3 uid="uid://be734b30e5t3n"]
+[gd_scene load_steps=2 format=3 uid="uid://be734b30e5t3n"]
+
+[ext_resource type="Script" path="res://gd_asteroids.gd" id="1_orxnd"]
 
 [node name="GD_Asteroids" type="Node"]
+script = ExtResource("1_orxnd")
 
 [node name="Node2D" type="Node2D" parent="."]
