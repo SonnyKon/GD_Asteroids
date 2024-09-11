@@ -19,6 +19,25 @@ func myFunc( testOne: int) -> int:
 	return (testOne + 1)
 
 
+func test_draw() -> void:
+	##void draw_colored_polygon(points: PackedVector2Array, color: Color, uvs: PackedVector2Array = PackedVector2Array(), texture: Texture2D = null)
+	var ShipPoints: PackedVector2Array
+	var ShipColor: Color
+		
+	ShipPoints.append(Vector2(0,100))
+	ShipPoints.append(Vector2(-100,50))
+	ShipPoints.append(Vector2(-100,-50))
+	ShipColor.b = 255
+	
+	var points: PackedVector2Array
+	var color: Color
+	##uvs: PackedVector2Array = PackedVector2Array()
+	##texture: Texture2D = null
+	##draw_colored_polygon(ShipPoints, ShipColor)
+	
+	##draw_colored_polygon(points, color)
+	return
+
 #print("alpha[%s]: %s" % [alpha,text])
 
 func _init() -> void:
@@ -32,6 +51,10 @@ func _ready() -> void:
 	#text = " sucks!"
 	print("alpha[%s]: %s" % [beta,text])
 	
+	set_process_shortcut_input( false )
+	set_process_unhandled_key_input( false )
+	set_process_unhandled_input( false)
+	set_process_input( false )
 	return
 
 
@@ -39,3 +62,19 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	
 	pass
+
+
+func _input(event: InputEvent) -> void:
+	
+	#Viewport.set_input_as_handled()
+	return
+
+func _shortcut_input(event: InputEvent) -> void:
+	
+	return
+
+func _unhandled_key_input(event: InputEvent) -> void:
+	return
+
+func _unhandled_input(event: InputEvent) -> void:
+	return
