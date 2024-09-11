@@ -1,6 +1,7 @@
 extends Node
 
 
+
 #var alpha : int; var text : String;
 @onready var alpha : int = 100
 @onready var text : String = " sucks also";
@@ -37,5 +38,8 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	
+	pass
+func _input(event: InputEvent) -> void:
 	
 	pass

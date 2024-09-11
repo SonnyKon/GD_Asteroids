@@ -1,9 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://be734b30e5t3n"]
+[gd_scene load_steps=3 format=3 uid="uid://be734b30e5t3n"]
 
 [ext_resource type="Script" path="res://gd_asteroids.gd" id="1_orxnd"]
+[ext_resource type="PackedScene" uid="uid://bc3lxo11sbrjx" path="res://rocketScene.tscn" id="2_4cank"]
 
 [node name="GD_Asteroids" type="Node"]
 script = ExtResource("1_orxnd")
 beta = 1
 
 [node name="Node2D" type="Node2D" parent="."]
+
+[node name="shipBody" parent="Node2D" instance=ExtResource("2_4cank")]
+unique_name_in_owner = true
+position = Vector2(634, 348)
+up_direction = Vector2(0, 1)

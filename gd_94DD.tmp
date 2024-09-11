@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://be734b30e5t3n"]
+
+[ext_resource type="Script" path="res://gd_asteroids.gd" id="1_orxnd"]
+[ext_resource type="Texture2D" uid="uid://ddlwymk0nljle" path="res://shuttleNoFlames.png" id="2_1ric1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lmom6"]
+
+[node name="GD_Asteroids" type="Node"]
+script = ExtResource("1_orxnd")
+beta = 1
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Node2D"]
+motion_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/CharacterBody2D"]
+texture = ExtResource("2_1ric1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/CharacterBody2D"]
+shape = SubResource("RectangleShape2D_lmom6")
+disabled = true

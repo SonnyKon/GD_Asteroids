@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bc3lxo11sbrjx"]
+
+[ext_resource type="Script" path="res://rocket_scene.gd" id="1_afl64"]
+[ext_resource type="Texture2D" uid="uid://ddlwymk0nljle" path="res://shuttleNoFlames.png" id="1_evwue"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lmom6"]
+size = Vector2(250, 313)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+position = Vector2(363, 348)
+script = ExtResource("1_afl64")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_evwue")
+offset = Vector2(0, 50)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, -26)
+shape = SubResource("RectangleShape2D_lmom6")
+disabled = true
